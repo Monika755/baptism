@@ -219,7 +219,10 @@
   .letter h1 {
     font-size: 28px;
   }
-
+ 
+.hint {
+  bottom: 120px;
+}
   .letter p {
     font-size: 14px;
   }

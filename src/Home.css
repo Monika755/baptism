@@ -92,12 +92,11 @@
 
 
 .invitation-section {
-  min-height: 100vh;
-  padding: 100px 20px;
+  min-height: auto;
+  padding: 10px 20px 30px;
   background: #fff;
   text-align: center;
 }
-
 .invitation-section h2 {
   font-size: 34px; 
   color: #C19A6B; 
@@ -218,8 +217,9 @@
   }
 
   .invitation-section {
-    padding: 60px 18px;
-  }
+  min-height: auto;
+  padding: 20px 20px 15px;
+}
 
   .invitation-section h2 {
     font-size: 22px;
@@ -280,126 +280,500 @@
   font-family: "Victory";
   color: #C19A6B;
 } 
+ 
+/* =========================
+   CHURCH SECTION
+========================= */
 
-.brother-section {
+.church-section {
+  width: 100%;
+  background: #fff;
+  padding: 30px 20px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 0;
+}
+
+.church-img {
+  width: 100px;
+  margin-bottom: 35px;
+}
+
+.church-section h2 {
+  font-family: "fff";
+  font-size: 30px;
+  font-weight: normal;
+  color: black;
+  margin-bottom: 18px;
+}
+
+.church-time {
+  font-size: 30px;
+  color: black;
+  margin-bottom: 18px; 
+  font-family: "fff";
+  letter-spacing: 1px;
+}
+
+.church-place {
+  font-size: 34px;
+  color: #C19A6B;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.map-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 220px;
+  height: 55px;
+
+  border: 1px solid #b89b72;
+  border-radius: 40px;
+
+  background: transparent;
+  color: #8b6a43;
+
+  font-size: 20px;
+  text-decoration: none;
+
+  transition: .3s ease;
+}
+
+.map-btn:hover {
+  background: #b89b72;
+  color: #fff;
+}
+
+.map-icon {
+  width: 400px;
+  margin-top: 45px;
+} 
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .church-section {
+    padding: 70px 20px 80px;
+    margin-top: -30px;
+  }
+
+  .church-img {
+    width: 90px;
+  }
+
+  .church-section h2 {
+    font-size: 36px;
+  }
+
+  .church-time {
+    font-size: 26px;
+  }
+
+  .church-place {
+    font-size: 21px;
+  }
+
+  .map-btn {
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .map-icon {
+    width: 330px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .church-section {
+    padding: 60px 20px 70px;
+    margin-top: -20px;
+  }
+
+  .church-img {
+    width: 80px;
+    margin-bottom: 25px;
+  }
+
+  .church-section h2 {
+    font-size: 22px;
+  }
+
+  .church-time {
+    font-size: 24px;
+  }
+
+  .church-place {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+
+  .map-btn {
+    width: 190px;
+    height: 48px;
+    font-size: 17px;
+  }
+
+  .map-icon {
+    width: 270px;
+    margin-top: 35px;
+  }
+}
+
+/* =========================
+   iPhone 12 / 13 / 14
+========================= */
+
+@media (max-width: 390px) {
+  .church-section {
+    padding: 50px 15px 60px;
+    margin-top: -10px;
+  }
+
+  .church-img {
+    width: 70px;
+  }
+
+  .church-section h2 {
+    font-size: 24px;
+  }
+
+  .church-time {
+    font-size: 21px;
+  }
+
+  .church-place {
+    font-size: 22px;
+  }
+
+  .map-btn {
+    width: 170px;
+    height: 45px;
+    font-size: 15px;
+  }
+
+  .map-icon {
+    width: 220px;
+    margin-top: 30px;
+  }
+} 
+
+/* =========================
+   PARTY SECTION
+========================= */
+
+.party-section {
+  width: 100%;
+  background: #fff;
+  padding: 40px 20px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.party-img {
+  width: 100px;
+  margin-bottom: 35px;
+}
+
+.party-section h2 {
+ font-family: "fff";
+  font-size: 30px;
+  font-weight: normal;
+  color: black;
+  margin-bottom: 18px;
+}
+
+.party-time {
+  font-size: 30px;
+  font-family: "fff";
+  margin-bottom: 18px;
+}
+
+.party-place {
+   font-size: 34px;
+  color: #C19A6B;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.party-photo {
+width: 400px;
+  margin-top: 45px;
+}
+
+/* TABLET */
+
+@media (max-width: 992px) {
+  .party-img {
+    width: 90px;
+  }
+
+  .party-section h2 {
+    font-size: 26px;
+  }
+
+  .party-time {
+    font-size: 26px;
+  }
+
+  .party-place {
+    font-size: 28px;
+  }
+
+  .party-photo {
+    width: 330px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .party-section {
+    padding: 50px 20px 70px;
+  }
+
+  .party-img {
+    width: 80px;
+  }
+
+  .party-section h2 {
+    font-size: 22px;
+  }
+
+  .party-time {
+    font-size: 24px;
+  }
+
+  .party-place {
+    font-size: 24px;
+  }
+
+  .party-photo {
+    width: 270px;
+    margin-top: 35px;
+  }
+}
+
+/* iPhone 12/13/14 */
+
+@media (max-width: 390px) {
+  .party-img {
+    width: 70px;
+  }
+
+  .party-section h2 {
+    font-size: 20px;
+  }
+
+  .party-time {
+    font-size: 21px;
+  }
+
+  .party-place {
+    font-size: 22px;
+  }
+
+  .party-photo {
+    width: 220px;
+    margin-top: 30px;
+  }
+} 
+
+/* =========================
+   COUNTDOWN SECTION
+========================= */
+
+.countdown-section {
   position: relative;
   width: 100%;
-  height: 750px;
+  height: 620px;
+  background: #fff;
+
   display: flex;
   justify-content: center;
-  align-items: center; 
-  margin-top: -120px;
+  align-items: center;
 }
 
-/* սպիտակ ֆոն */
-.brother-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: white;
-  z-index: 0;
-}
-
-/* նկարը */
-.brother-img {
-  position: relative;
-  z-index: 1;
-  width: 45%;
-  height: 100%;
+/* Նկարը */
+.countdown-bg {
+  width: 68%;
+  height: 560px;
   object-fit: cover;
-  border-radius: 18px;
-
-  transition: transform 0.5s ease, filter 0.5s ease;
+  border-radius: 20px;
+  display: block;
 }
 
-/* 👇 hover effect */
-.brother-img:hover {
-  transform: scale(1.05);
-  filter: brightness(1.1);
-}
-
-/* տեքստ */
-.brother-text {
+/* Տեքստերը նկարի վրա */
+.countdown-overlay {
   position: absolute;
-  z-index: 2;
-  bottom: 25px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 68%;
+  height: 560px;
+}
+
+/* Վերնագիր */
+.countdown-overlay h2 {
+  position: absolute;
+  top: 35px;
   left: 50%;
   transform: translateX(-50%);
+
+  width: 100%;
+
+  text-align: center;
   color: white;
-  font-size: 30px;
-  font-weight: bold;
-  text-shadow: 0 4px 10px rgba(0,0,0,0.7);
-  text-align: center; 
+
+  font-family: "fff";
+  font-size: 36px;
+  letter-spacing: 2px;
+}
+
+/* Հաշվիչ */
+.countdown {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 55px;
+}
+
+.countdown div {
+  text-align: center;
+}
+
+.countdown span {
+  display: block;
+  color: white;
+  font-size: 68px;
   font-family: "Victory";
 }
 
-/* ===== MEDIA QUERIES ===== */
-
-@media (max-width: 1024px) { 
- 
-  .brother-img {
-    width: 60%;
-  }
-
-  .brother-text {
-    font-size: 26px;
-  }
+.countdown p {
+  margin-top: 8px;
+  color: white;
+  font-size: 20px;
+  font-family: "fff";
 }
 
-@media (max-width: 768px) { 
- .brother-section {
-  height: 450px;    
-}
- 
+/* =========================
+   TABLET
+========================= */
 
-   .brother-img {
-    width: 60%;   /* 👈 ՍԱ է կարևոր փոփոխությունը (շատ փոքրացնում ենք) */
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+@media (max-width: 992px) {
+
+  .countdown-section {
+    height: 520px;
   }
-  .brother-text {
+
+  .countdown-bg,
+  .countdown-overlay {
+    width: 82%;
+    height: 460px;
+  }
+
+  .countdown-overlay h2 {
+    font-size: 30px;
+  }
+
+  .countdown {
+    gap: 35px;
+  }
+
+  .countdown span {
+    font-size: 48px;
+  }
+
+  .countdown p {
     font-size: 18px;
-    bottom: 20px;
   }
 }
 
-@media (max-width: 480px) { 
-.brother-section { 
-  margin-top: -400px; 
-  height: 300px;    
+/* =========================
+   MOBILE
+========================= */
 
+@media (max-width: 768px) {
+
+  .countdown-section {
+    height: 390px;
   }
 
- .brother-img {
-    width: 60%;   /* 👈 ՍԱ է կարևոր փոփոխությունը (շատ փոքրացնում ենք) */
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+  .countdown-bg,
+  .countdown-overlay {
+    width: 92%;
+    height: 340px;
   }
 
-  .brother-text {
-    font-size: 14px;
+  .countdown-overlay h2 {
+    top: 22px;
+    font-size: 22px;
+  }
+
+  .countdown {
+    bottom: 22px;
+    gap: 18px;
+  }
+
+  .countdown span {
+    font-size: 32px;
+  }
+
+  .countdown p {
+    font-size: 13px;
+    margin-top: 5px;
   }
 }
 
-/* ===== 360px (քո ուզածը) ===== */
+/* =========================
+   VERY SMALL PHONES
+========================= */
 
-@media (max-width: 360px) {
-  .brother-section { 
-    margin-top: -200px;
-    height: 260px;
+@media (max-width: 390px) {
+
+  .countdown-section {
+    height: 330px;
   }
 
-  .brother-img {
-    width: 70%;   /* 👈 ՍԱ է կարևոր փոփոխությունը (շատ փոքրացնում ենք) */
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+  .countdown-bg,
+  .countdown-overlay {
+    width: 94%;
+    height: 290px;
   }
 
-  .brother-text {
-    font-size: 10px;
-    bottom: 15px;
+  .countdown-overlay h2 {
+    font-size: 18px;
+    top: 18px;
+  }
+
+  .countdown {
+    gap: 12px;
+    bottom: 18px;
+  }
+
+  .countdown span {
+    font-size: 24px;
+  }
+
+  .countdown p {
+    font-size: 11px;
   }
 }
