@@ -1,16 +1,18 @@
 import "./Home.css";
 
-export default function Home() {
-  const base = import.meta.env.BASE_URL;
+import imm from "./assets/imm.png";
+import cross from "./assets/cross.png";
+import brother from "./assets/brother.png";
 
+export default function Home() {
   return (
     <div className="home">
       {/* Առաջին էկրան */}
       <section className="hero">
-        <img src={base + "imm.png"} alt="invitation" className="hero-img" />
+        <img src={imm} alt="invitation" className="hero-img" />
 
         <div className="hero-text">
-          <img src={base + "cross.png"} alt="cross" className="cross" />
+          <img src={cross} alt="cross" className="cross" />
 
           <h1>Սուրբ Մկրտություն</h1>
           <p className="date">03․08․2026</p>
@@ -37,7 +39,7 @@ export default function Home() {
       </section>
 
       <div className="brother-section">
-        <img src={base + "brother.png"} alt="brother" className="brother-img" />
+        <img src={brother} alt="brother" className="brother-img" />
 
         <div className="brother-text">
           Օրհնված Վերադարձ
