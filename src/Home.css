@@ -1,0 +1,384 @@
+@font-face {
+  font-family: "Victory";
+  src: url("/fonts/Victory.otf");
+} 
+ 
+@font-face {
+  font-family: "fff";
+  src: url("/fonts/fff.TTF");
+}
+ 
+ 
+.home {
+  animation: homeIn 1.2s ease;
+}
+
+@keyframes homeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}  
+
+.home {
+  width: 100%;
+  height: 100vh;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #fff;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  /* Chrome, Edge, Safari */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,1) 55%,
+    rgba(0,0,0,0.95) 70%,
+    rgba(0,0,0,0.7) 82%,
+    rgba(0,0,0,0.35) 92%,
+    transparent 100%
+  );
+
+  /* Firefox */
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,1) 55%,
+    rgba(0,0,0,0.95) 70%,
+    rgba(0,0,0,0.7) 82%,
+    rgba(0,0,0,0.35) 92%,
+    transparent 100%
+  );
+}
+
+/* TEXT OVER IMAGE */
+.hero-text {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  text-shadow: 0 8px 25px rgba(0,0,0,0.6);
+}
+.hero-text h1 {
+  font-size: 30px; 
+  font-family: "Times New Roman", serif;
+  letter-spacing: 2px;
+  margin-bottom: 10px; 
+  font-family: "Victory";
+}
+
+.hero-text p {
+  font-size: 15px;
+  font-family: "Georgia", serif;
+  letter-spacing: 3px; 
+  font-family: "Victory";
+}   
+
+
+.invitation-section {
+  min-height: 100vh;
+  padding: 100px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.invitation-section h2 {
+  font-size: 34px; 
+  color: #C19A6B; 
+  font-family: "fff";  
+  margin-bottom: 35px;
+}
+
+.invitation-section p {
+  font-size: 22px;
+  font-family: "fff";
+  line-height: 1.35; /* 1.8-ի փոխարեն */
+  margin: 8px 0;
+}
+
+.names {
+  margin: 30px 0;
+  font-size: 28px; 
+  font-family: "fff";
+  font-weight: bold;
+} 
+
+
+/* =========================
+   TABLETS (1024px)
+========================= */
+@media (max-width: 1024px) {
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  .invitation-section {
+    padding: 80px 30px;
+  }
+
+  .invitation-section h2 {
+    font-size: 30px;
+  }
+
+  .invitation-section p {
+    font-size: 20px;
+  }
+
+  .names {
+    font-size: 26px;
+  }
+}
+
+/* =========================
+   TABLETS (768px)
+========================= */
+@media (max-width: 768px) {
+  .hero {
+    height: 90vh;
+  }
+
+  .hero-text {
+    width: 90%;
+    bottom: 35px;
+  }
+
+  .hero-text h1 {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  .hero-text p {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  .invitation-section {
+    padding: 70px 20px;
+  }
+
+  .invitation-section h2 {
+    font-size: 28px;
+  }
+
+  .invitation-section p {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .names {
+    font-size: 24px;
+  }
+}
+
+/* =========================
+   MOBILE (480px)
+========================= */
+@media (max-width: 480px) {
+  .hero {
+    height: 80vh;
+  }
+
+  .hero-text {
+    width: 90%;
+    bottom: 25px;
+  }
+
+  .hero-text h1 {
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  .hero-text p {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .invitation-section {
+    padding: 60px 18px;
+  }
+
+  .invitation-section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .invitation-section p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .names {
+    font-size: 20px;
+    margin: 20px 0;
+  }
+}
+
+/* =========================
+   VERY SMALL DEVICES (360px)
+========================= */
+@media (max-width: 360px) {
+  .hero-text h1 {
+    font-size: 16px;
+  }
+
+  .hero-text p {
+    font-size: 10px;
+  }
+
+  .invitation-section h2 {
+    font-size: 20px;
+  }
+
+  .invitation-section p {
+    font-size: 15px;
+  }
+
+  .names {
+    font-size: 18px;
+  }
+} 
+
+.date-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-top: 60px;
+}
+
+.date-block p { 
+  font-size: 24px;
+  margin: 0;
+  font-family: "Victory";
+  color: #C19A6B;
+} 
+
+.brother-section {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* սպիտակ ֆոն */
+.brother-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: white;
+  z-index: 0;
+}
+
+/* նկարը */
+.brother-img {
+  position: relative;
+  z-index: 1;
+  width: 45%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* 👇 hover effect */
+.brother-img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* տեքստ */
+.brother-text {
+  position: absolute;
+  z-index: 2;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.7);
+  text-align: center; 
+  font-family: "Victory";
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+@media (max-width: 1024px) {
+  .brother-img {
+    width: 60%;
+  }
+
+  .brother-text {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+   .brother-img {
+    width: 60%;   /* 👈 ՍԱ է կարևոր փոփոխությունը (շատ փոքրացնում ենք) */
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .brother-text {
+    font-size: 18px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+ .brother-img {
+    width: 60%;   /* 👈 ՍԱ է կարևոր փոփոխությունը (շատ փոքրացնում ենք) */
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .brother-text {
+    font-size: 14px;
+  }
+}
+
+/* ===== 360px (քո ուզածը) ===== */
+
+@media (max-width: 360px) {
+  .brother-section {
+    height: 260px;
+  }
+
+  .brother-img {
+    width: 70%;   /* 👈 ՍԱ է կարևոր փոփոխությունը (շատ փոքրացնում ենք) */
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .brother-text {
+    font-size: 10px;
+    bottom: 15px;
+  }
+}
