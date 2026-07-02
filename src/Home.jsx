@@ -1,14 +1,16 @@
 import "./Home.css";
 
 export default function Home() {
+  const base = import.meta.env.BASE_URL;
+
   return (
     <div className="home">
       {/* Առաջին էկրան */}
       <section className="hero">
-        <img src="/imm.png" alt="invitation" className="hero-img" />
+        <img src={base + "imm.png"} alt="invitation" className="hero-img" />
 
         <div className="hero-text">
-          <img src="/cross.png" alt="cross" className="cross" />
+          <img src={base + "cross.png"} alt="cross" className="cross" />
 
           <h1>Սուրբ Մկրտություն</h1>
           <p className="date">03․08․2026</p>
@@ -24,22 +26,23 @@ export default function Home() {
 
         <p className="names">Անահիտի և Կորյունի</p>
 
-        <p>Սուրբ Մկրտության լուսավոր օրը։</p> 
-        <p>Սպասում ենք Ձեզ</p> 
+        <p>Սուրբ Մկրտության լուսավոր օրը։</p>
+        <p>Սպասում ենք Ձեզ</p>
 
-           <div className="date-block">
-  <p>23</p>
-  <p>Օգոստոսի</p>
-  <p>2026</p>
-</div>
-      </section> 
-<div className="brother-section">
-  <img src="/brother.png" alt="brother" className="brother-img" />
+        <div className="date-block">
+          <p>23</p>
+          <p>Օգոստոսի</p>
+          <p>2026</p>
+        </div>
+      </section>
 
-  <div className="brother-text">
-    Օրհնված Վերադարձ
-  </div>
-</div>
+      <div className="brother-section">
+        <img src={base + "brother.png"} alt="brother" className="brother-img" />
+
+        <div className="brother-text">
+          Օրհնված Վերադարձ
+        </div>
+      </div>
     </div>
   );
 }
