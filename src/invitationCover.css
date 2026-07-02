@@ -4,26 +4,34 @@
   box-sizing: border-box;
 }
 
-/* RETRO BACKGROUND (AGED PAPER) */
-.cover-page {
-  width: 100vw;
-  height: 100vh;
+/* =========================
+   BASE
+========================= */
 
+.cover-page {
+  width: 100%;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
-
-  background: #b4b4f1
-;
-
+  background: #b4b4f1;
 }
 
+.cover-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 35%, rgba(60,30,10,0.08));
+  z-index: 1;
+  pointer-events: none;
+}
 
+/* =========================
+   ENVELOPE
+========================= */
 
-/* ENVELOPE */
 .envelope {
-  width: 100vw;
-  height: 100vh;
-
+  width: 100%;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
 
@@ -35,7 +43,40 @@
     0 30px 80px rgba(60, 40, 20, 0.12);
 }
 
-/* LETTER */
+/* =========================
+   FLAP
+========================= */
+
+.flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 60%;
+  z-index: 10;
+
+  background-image: url("/image1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+
+  transition: transform 1s ease, opacity 1s ease;
+  will-change: transform, opacity;
+}
+
+.open .flap {
+  opacity: 0;
+  transform: scale(1.05);
+  pointer-events: none;
+}
+
+/* =========================
+   LETTER (TEXT + SEAL)
+========================= */
+
 .letter {
   position: absolute;
   inset: 0;
@@ -48,36 +89,46 @@
 
   text-align: center;
 
-  transform: translateY(56px);
+  opacity: 1;
+  transform: translateY(30px); /* 🔥 մի քիչ ներքև */
 
-  animation: fadeIn 1.5s ease;
-  transition: opacity 1.2s ease, transform 1.2s ease, filter 1.2s ease;
+  transition: opacity 1s ease, transform 1s ease;
+  will-change: opacity, transform;
 }
 
+.open .letter {
+  opacity: 0;
+  transform: translateY(25px) scale(0.97);
+  pointer-events: none;
+}
 
-/* TITLE */
+/* TEXT */
+
 .letter h1 {
   font-size: 72px;
   font-family: "Times New Roman", serif;
   font-weight: 300;
   letter-spacing: 10px;
-
   color: #4e3b2c;
-
-  text-shadow: 0 10px 30px rgba(60, 40, 20, 0.15);
 }
 
-/* SEAL */
-.seal {
-  width: 50px;
-  height: 50px;
+.letter p {
+  font-size: 22px;
+  letter-spacing: 7px;
+  font-family: "Georgia", serif;
+  color: #6b4e3b;
+}
 
-  margin: 35px 0;
+/* =========================
+   SEAL
+========================= */
+
+.seal {
+  width: 100px;
+  height: 100px;
+  margin: 45px 0 25px; /* 🔥 մի քիչ ներքև shift */
 
   border-radius: 50%;
-  position: relative;
-
-  /* SOFT BLUE WAX / GLASS LOOK */
   background: #F0F8FF;
 
   box-shadow:
@@ -90,90 +141,20 @@
   align-items: center;
 
   font-size: 40px;
-  color: rgba(255, 255, 255, 0.95);
 
-  font-family: "Times New Roman", serif;
-
-  transform: rotate(-8deg);
-
-  animation: sealDrop 1.3s ease;
-}
-@keyframes sealDrop {
-  0% {
-    transform: scale(0.5) rotate(-10deg);
-    opacity: 0;
-    filter: blur(2px);
-  }
-  70% {
-    transform: scale(1.05) rotate(-10deg);
-    filter: blur(0px);
-  }
-  100% {
-    transform: scale(1) rotate(-10deg);
-    opacity: 1;
-  }
+  transition: opacity 1s ease, transform 1s ease;
+  will-change: opacity, transform;
 }
 
-
-/* TEXT */
-.letter p {
-  font-size: 22px;
-  letter-spacing: 7px;
-  font-family: "Georgia", serif;
-  color: #6b4e3b;
-  opacity: 0.95;
-}
-
-/* FLAP */
-.flap {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 60%;
-
-  z-index: 10;
-
-  background-image: url("/image1.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  clip-path: polygon(0 0, 100% 0, 50% 100%);
-
-  transform-origin: top;
-
-  transition: transform 3.2s cubic-bezier(0.12, 0.85, 0.25, 1);
-
-  box-shadow:
-    inset 0 -30px 45px rgba(70, 45, 25, 0.18),
-    inset 0 10px 20px rgba(255, 245, 230, 0.25),
-    0 10px 25px rgba(60, 40, 20, 0.12);
-
-  will-change: transform;
-}
-
-/* OPEN */
-.open .flap {
-  transform: perspective(1400px) rotateX(-175deg) translateY(-10px);
-  z-index: 5;
-}
-
-/* LETTER DISAPPEAR */
-.open .letter {
+.open .seal {
   opacity: 0;
-  transform: translateY(10px) scale(0.98);
-  filter: blur(8px);
-  pointer-events: none;
-
-  transition:
-    opacity 1.2s ease,
-    transform 1.2s ease,
-    filter 1.2s ease;
+  transform: scale(0.9);
 }
 
-/* HINT */
+/* =========================
+   HINT
+========================= */
+
 .hint {
   position: absolute;
   bottom: 30px;
@@ -182,22 +163,78 @@
 
   font-size: 13px;
   letter-spacing: 3px;
-
   color: rgba(80, 55, 35, 0.55);
 
   animation: blink 2s infinite;
-
-  font-family: "Georgia", serif;
 }
 
 @keyframes blink {
   50% { opacity: 0.2; }
 }
 
-/* OVERLAY */
-.cover-page::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at center, transparent 35%, rgba(60,30,10,0.08));
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+  .letter h1 {
+    font-size: 52px;
+    letter-spacing: 6px;
+  }
+
+  .letter p {
+    font-size: 18px;
+  }
+
+  .seal {
+    width: 85px;
+    height: 85px;
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .letter h1 {
+    font-size: 36px;
+  }
+
+  .letter p {
+    font-size: 16px;
+    letter-spacing: 4px;
+  }
+
+  .seal {
+    width: 70px;
+    height: 70px;
+    margin-top: -10px;
+  }
+
+  .flap {
+    height: 55%;
+  }
+}
+
+@media (max-width: 480px) {
+  .letter h1 {
+    font-size: 28px;
+  }
+
+  .letter p {
+    font-size: 14px;
+  }
+
+  .seal {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 360px) {
+  .letter h1 {
+    font-size: 24px;
+  }
+
+  .letter p {
+    font-size: 13px;
+  }
 }
