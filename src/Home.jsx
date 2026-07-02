@@ -101,7 +101,7 @@ useEffect(() => {
 
   <h2>Խնջույք</h2>
 
-  <p className="party-time">18:00</p>
+  <p className="party-time">17:00</p>
 
   <p className="party-place">
     Paradise Hall <br />
