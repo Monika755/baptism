@@ -198,7 +198,7 @@
 ========================= */
 @media (max-width: 480px) {
   .hero {
-    height: 100vh;
+    height: 70vh;
   }
 
   .hero-text {
@@ -240,7 +240,11 @@
 /* =========================
    VERY SMALL DEVICES (360px)
 ========================= */
-@media (max-width: 360px) {
+@media (max-width: 360px) { 
+  .hero {
+    height: 50vh;
+  }
+
   .hero-text h1 {
     font-size: 16px;
   }
@@ -362,7 +366,7 @@
 
 @media (max-width: 480px) { 
 .brother-section { 
-  margin-top: -180px; 
+  margin-top: -400px; 
   height: 300px;    
 
   }
