@@ -75,13 +75,6 @@
   color: white;
   text-shadow: 0 8px 25px rgba(0,0,0,0.6);
 }
-.hero-text h1 {
-  font-size: 30px; 
-  font-family: "Times New Roman", serif;
-  letter-spacing: 2px;
-  margin-bottom: 10px; 
-  font-family: "Victory";
-}
 
 .hero-text p {
   font-size: 15px;

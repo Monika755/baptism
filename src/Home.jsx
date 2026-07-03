@@ -10,7 +10,7 @@ import countdownBg from "./assets/nkar.png";
 import { useEffect, useState } from "react";
 
 export default function Home() { 
-  const targetDate = new Date("2026-08-23T15:10:00");
+  const targetDate = new Date("2026-08-03T15:10:00");
 
 const [timeLeft, setTimeLeft] = useState({
   days: 0,
@@ -48,7 +48,6 @@ useEffect(() => {
         <div className="hero-text">
           <img src={cross} alt="cross" className="cross" />
 
-          <h1>Սուրբ Մկրտություն</h1>
           <p className="date">03․08․2026</p>
           <p className="subtitle">Օրհնված սկիզբ</p> 
            <p className="subtitle">Օրհնված Վերադարձ</p> 
@@ -67,7 +66,7 @@ useEffect(() => {
         <p>Սպասում ենք Ձեզ</p>
 
         <div className="date-block">
-          <p>23</p>
+          <p>03</p>
           <p>Օգոստոսի</p>
           <p>2026</p>
         </div>
