@@ -74,7 +74,7 @@ export default function Home() {
 
           <p className="date">03․08․2026</p>
           <p className="subtitle">Օրհնված սկիզբ</p>
-          <p className="subtitle">Օրհնված Վերադարձ</p>
+          <p className="subtitle">Օրհնված վերադարձ</p>
         </div>
       </section>
 
