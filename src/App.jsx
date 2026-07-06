@@ -1,5 +1,5 @@
 import { useState } from "react";
-import InvitationCover from "./InvitationCover";
+import InvitationCover from "./invitationCover";
 import Home from "./Home";
 import "./index.css";
 
