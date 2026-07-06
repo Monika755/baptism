@@ -123,7 +123,7 @@ export default function Home() {
         <img src={champagne} alt="Champagne" className="party-img" />
 
         <h2>Խնջույք</h2>
-        <p className="party-time">17:00</p>
+        <p className="party-time">17:30</p>
 
         <p className="party-place">
           Paradise Hall <br />
